@@ -1,0 +1,7 @@
+DAO\UsuarioDAOIMPL.class
+controle\CalculadoraBean.class
+JpaUtil\JpaUtil.class
+DAO\UsuarioDAO.class
+Aplication\TestConexao.class
+controle\LoginBean.class
+entidade\Usuario.class
