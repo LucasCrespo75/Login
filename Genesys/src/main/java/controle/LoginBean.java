@@ -4,15 +4,14 @@ import java.util.List;
 
 import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
-import javax.faces.bean.RequestScoped;
+import javax.faces.bean.SessionScoped;
 import javax.faces.context.FacesContext;
-import javax.servlet.http.HttpSession;
 
 import DAO.UsuarioDAOIMPL;
 import entidade.Usuario;
 
 @ManagedBean(name = "LoginBean")
-@RequestScoped
+@SessionScoped
 
 public class LoginBean {
 		
@@ -24,7 +23,6 @@ public class LoginBean {
 		private Usuario usuario;
 		private String msgCadastroUsuario;
 		
-	
 		private UsuarioDAOIMPL usuarioDAO;
 
 		public LoginBean() {
@@ -60,9 +58,9 @@ public class LoginBean {
 			
 			Usuario novo = new Usuario();
 			
-			novo.setNome_usuario(this.nome_usuario);
-			novo.setSenha_usuario(this.senha_usuario);
-			novo.setId_cpf(this.id_cpf);
+			novo.setNome_usuario(this.usuario.getNome_usuario());
+			novo.setSenha_usuario(this.usuario.getSenha_usuario());
+			novo.setId_cpf(this.usuario.getId_cpf());
 			
 			boolean achou = false;
 			
