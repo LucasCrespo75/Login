@@ -10,7 +10,7 @@ package DAO;
 		
 		public void remover(Usuario usuario);
 		
-		public void pesquisar(int id_cpf);
+		public void pesquisar(double id_cpf);
 		
 		public List<Usuario> listaUsuario();
 

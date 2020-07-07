@@ -50,7 +50,7 @@ public class UsuarioDAOIMPL implements UsuarioDAO {
 		return ;
 	}
 	
-	public void pesquisar(int id_cpf) {
+	public void pesquisar(double id_cpf) {
 		return;
 	}	
 

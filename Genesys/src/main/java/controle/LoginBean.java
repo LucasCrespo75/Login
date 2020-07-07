@@ -15,7 +15,7 @@ import entidade.Usuario;
 
 public class LoginBean {
 		
-		private int id_cpf;
+		private double id_cpf;
 		private String nome_usuario;
 		private String senha_usuario;
 		
@@ -74,18 +74,23 @@ public class LoginBean {
 				FacesContext.getCurrentInstance()
 				.addMessage(null, new FacesMessage(FacesMessage.SEVERITY_ERROR, "Error!", "Usuario já existe!!!"));
 			}else {
+				//inserir um novo partindo da interface do q foi pedido la(inserir)
+				//n precisa da listaUsuario porq ela foi validada em cima
 				this.usuarioDAO.inserir(novo);
 				
+				//poderia sim, colocar essa instancia la em cima, 
+				//mas para ficar organizado, pode colocar aqui(mas é necessario p/ limpar no cadastro para um NOVO)
 				this.usuario = new Usuario();
+				
 			}
 		}
 		
 
-		public int getId_cpf() {
+		public double getId_cpf() {
 			return id_cpf;
 		}
 
-		public void setId_cpf(int id_cpf) {
+		public void setId_cpf(double id_cpf) {
 			this.id_cpf = id_cpf;
 		}
 

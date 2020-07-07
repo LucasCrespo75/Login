@@ -11,7 +11,7 @@ public class Usuario {
 
     @Id
     @Column(name = "ID_CPF", nullable = false)
-	private int id_cpf;
+	private double id_cpf;
     
     @Column(name = "NOME_USUARIO", nullable = false)
 	private String nome_usuario;
@@ -23,11 +23,11 @@ public class Usuario {
     
 
     
-	public int getId_cpf() {
+	public double getId_cpf() {
 		return id_cpf;
 	}
 
-	public void setId_cpf(int id_cpf) {
+	public void setId_cpf(double id_cpf) {
 		this.id_cpf = id_cpf;
 	}
 
